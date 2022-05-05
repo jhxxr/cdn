@@ -49,6 +49,8 @@ var generateBBHtml = array => {
             from_icon = '<i class="fas fa-laptop"></i>';
           }else if (array[i].from.indexOf("微信") != -1){
             from_icon = '<i class="fab fa-weixin" style="font-size: 0.6rem"></i>';
+          }else if (array[i].from.indexOf("QQ") != -1){
+            from_icon = '<i class="fab fa-qq" style="font-size: 0.6rem"></i>';
           }else{
             from_icon = '<i class="fas fa-tools"></i>';
           };
@@ -82,7 +84,7 @@ function urlToLink(str) {
 var re =/\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|gif))\S+/g;
 var re_forpic =/\bhttps?:[^:<>"]*\/([^:<>"]*)(\.(jpeg)|(png)|(jpg)|(webp))(!blogimg)?/g;
 str =str.replace(re_forpic,function (imgurl) {
-  return '<a href="' + imgurl + '"><img src="' + imgurl + '" width="100%"/></a>';
+  return '<a href="' + imgurl + '"><img src="' + imgurl + '" width="50%"/></a>';
 });
 str =str.replace(re,function (website) {
   return " <a href='" + website + "'rel='noopener' target='_blank'>↘链接↙</a> ";
