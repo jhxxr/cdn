@@ -28,10 +28,10 @@ else
 if [ "$answer" = "0" ]; then
 printf "\033[32mINFO \033[0m 欢迎下次光临！\n"
 sleep 1s
-exit 0
+exec ${npmpath}/0start.sh
 else
 printf "\033[31mERROR \033[0m 输入错误，请返回重新选择...\n"
 sleep 1s
-exec ${HexoPath}/menu.sh
+exec ${npmpath}/0start.sh
 fi
 fi
